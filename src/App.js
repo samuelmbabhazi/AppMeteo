@@ -9,7 +9,7 @@ function App() {
   const search = (evt) => {
     if (evt.key === "Enter") {
       fetch(
-        `http://api.openweathermap.org/data/2.5/weather?q=${town}&units=metric&appid=5c6f54f8fe0bf251b4535c78978cebf7`
+        `https://api.openweathermap.org/data/2.5/weather?q=${town}&units=metric&appid=5c6f54f8fe0bf251b4535c78978cebf7`
       )
         .then((res) => res.json())
         .then((result) => {
@@ -17,7 +17,7 @@ function App() {
           setTown("");
         });
       fetch(
-        `http://api.openweathermap.org/data/2.5/forecast?q=${town}&units=metric&appid=5c6f54f8fe0bf251b4535c78978cebf7`
+        `https://api.openweathermap.org/data/2.5/forecast?q=${town}&units=metric&appid=5c6f54f8fe0bf251b4535c78978cebf7`
       )
         .then((data) => data.json())
         .then((nextresult) => {
