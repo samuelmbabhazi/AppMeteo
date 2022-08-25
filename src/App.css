@@ -4,7 +4,6 @@ body {
   background-image: url("../public/bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  
   font-family: "ABeeZee", sans-serif;
   display: flex;
   justify-content: center;
@@ -16,7 +15,7 @@ body {
   width: 400px;
   height: 500px;
   color: black;
-margin-top: 15%;  
+  margin-top: 15%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -42,7 +41,7 @@ margin-top: 15%;
   box-shadow: 10px 10px 10px #7594ab;
   padding-left: 8px;
 }
-p{
+p {
   font-size: 25px;
 }
 .weather-box {
@@ -70,15 +69,14 @@ p{
   border: 1px solid rgb(255, 255, 255, 0.18);
   border-radius: 15px;
 }
-button{
+button {
   cursor: pointer;
   background-color: transparent;
-  border:none;
+  border: none;
 }
 footer {
   display: flex;
   justify-content: center;
-  
 }
 .img {
   position: relative;
@@ -129,14 +127,14 @@ h1 {
   border: 1px solid rgb(255, 255, 255, 0.18);
   border-radius: 15px;
 }
-h5{
+h5 {
   text-align: center;
   color: white;
-  
+
   padding: 0px;
 }
-@media (max-width:900px){
-  .main{
+@media (max-width: 900px) {
+  .main {
     width: 90vw;
   }
 }
