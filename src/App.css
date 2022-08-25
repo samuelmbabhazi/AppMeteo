@@ -1,7 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=ABeeZee&family=Poppins:wght@300&family=Raleway&display=swap");
 
 body {
-  background-color: #8ebbdc;
+  background-image: url("../public/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  
   font-family: "ABeeZee", sans-serif;
   display: flex;
   justify-content: center;
@@ -131,4 +134,9 @@ h5{
   color: white;
   
   padding: 0px;
+}
+@media (max-width:900px){
+  .main{
+    width: 90vw;
+  }
 }
