@@ -7,25 +7,24 @@ function App() {
   const [nextweather, setNextWeather] = useState("");
 
   const search = (evt) => {
-    if (evt.key === "Enter") {
-      fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${town}&units=metric&appid=5c6f54f8fe0bf251b4535c78978cebf7`
-      )
-        .then((res) => res.json())
-        .then((result) => {
-          setWeather(result);
-          setTown("");
-        });
-      fetch(
-        `https://api.openweathermap.org/data/2.5/forecast?q=${town}&units=metric&appid=5c6f54f8fe0bf251b4535c78978cebf7`
-      )
-        .then((data) => data.json())
-        .then((nextresult) => {
-          let next = nextresult.list[8].main.temp;
-          setNextWeather(next);
-        });
-    }
+    fetch(
+      `https://api.openweathermap.org/data/2.5/weather?q=${town}&units=metric&appid=5c6f54f8fe0bf251b4535c78978cebf7`
+    )
+      .then((res) => res.json())
+      .then((result) => {
+        setWeather(result);
+        setTown("");
+      });
+    fetch(
+      `https://api.openweathermap.org/data/2.5/forecast?q=${town}&units=metric&appid=5c6f54f8fe0bf251b4535c78978cebf7`
+    )
+      .then((data) => data.json())
+      .then((nextresult) => {
+        let next = nextresult.list[8].main.temp;
+        setNextWeather(next);
+      });
   };
+
   const months = [
     "janvier",
     "fevrier",
@@ -76,16 +75,16 @@ function App() {
             placeholder="Search Your Town..."
             onChange={(e) => setTown(e.target.value)}
             value={town}
-            onKeyPress={search}
           />
-          <button onClick={search}><img
-            src="search-location-solid.svg
+          <button onClick={search}>
+            <img
+              src="search-location-solid.svg
           "
-            alt=""
-            width={25}
-            className="img"
-          /></button>
-          
+              alt=""
+              width={25}
+              className="img"
+            />
+          </button>
         </div>
         {typeof weather.main !== "undefined" ? (
           <div>
