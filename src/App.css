@@ -135,6 +135,7 @@ h5 {
 }
 @media (max-width: 900px) {
   .main {
+    margin-top: 25%;
     width: 90vw;
   }
 }
