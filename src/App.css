@@ -37,6 +37,9 @@ body {
   box-shadow: 10px 10px 10px #7594ab;
   padding-left: 8px;
 }
+p{
+  font-size: 25px;
+}
 .weather-box {
   margin-left: auto;
   margin-right: auto;
@@ -62,10 +65,16 @@ body {
   border: 1px solid rgb(255, 255, 255, 0.18);
   border-radius: 15px;
 }
+button{
+  cursor: pointer;
+  background-color: transparent;
+  border:none;
+}
 img {
   position: relative;
   left: 1px;
-  top: 2px;
+  top: 10px;
+  filter: grayscale(1) invert(1);
 }
 h1 {
   text-align: center;

@@ -4,7 +4,7 @@ import "./App.css";
 function App() {
   const [town, setTown] = useState("");
   const [weather, setWeather] = useState("");
-  const [temp, setTemp] = useState("");
+  const [nextweather, setNextWeather] = useState("");
 
   const search = (evt) => {
     if (evt.key === "Enter") {
@@ -15,16 +15,14 @@ function App() {
         .then((result) => {
           setWeather(result);
           setTown("");
-          console.log(result);
         });
       fetch(
         `http://api.openweathermap.org/data/2.5/forecast?q=${town}&units=metric&appid=5c6f54f8fe0bf251b4535c78978cebf7`
       )
-        .then((data) => {
-          return data.json();
-        })
-        .then((dataJson) => {
-          setTemp(dataJson.list);
+        .then((data) => data.json())
+        .then((nextresult) => {
+          let next = nextresult.list[8].main.temp;
+          setNextWeather(next);
         });
     }
   };
@@ -80,12 +78,13 @@ function App() {
             value={town}
             onKeyPress={search}
           />
-          <img
+          <button onClick={search}><img
             src="search-location-solid.svg
           "
             alt=""
-            width={15}
-          />
+            width={25}
+          /></button>
+          
         </div>
         {typeof weather.main !== "undefined" ? (
           <div>
@@ -100,7 +99,7 @@ function App() {
               </div>
               <h5>{nextdateBuilder(new Date())}</h5>
               <div className="nextday">
-                <p>{Math.round(temp)}°c</p>
+                <p> ☁️{Math.round(nextweather)}°c</p>
               </div>
             </div>
           </div>
