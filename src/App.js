@@ -83,6 +83,7 @@ function App() {
           "
             alt=""
             width={25}
+            className="img"
           /></button>
           
         </div>
