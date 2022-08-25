@@ -7,7 +7,7 @@ function App() {
   const [nextweather, setNextWeather] = useState("");
 
   const search = (evt) => {
-    
+    if (evt.key === "Enter") {
       fetch(
         `http://api.openweathermap.org/data/2.5/weather?q=${town}&units=metric&appid=5c6f54f8fe0bf251b4535c78978cebf7`
       )
@@ -25,7 +25,7 @@ function App() {
           setNextWeather(next);
         });
     }
-  
+  };
   const months = [
     "janvier",
     "fevrier",
@@ -76,7 +76,7 @@ function App() {
             placeholder="Search Your Town..."
             onChange={(e) => setTown(e.target.value)}
             value={town}
-           
+            onKeyPress={search}
           />
           <button onClick={search}><img
             src="search-location-solid.svg
