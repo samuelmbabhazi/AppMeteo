@@ -14,6 +14,7 @@ function App() {
       .then((result) => {
         setWeather(result);
         setTown("");
+        console.log(result);
       });
     fetch(
       `https://api.openweathermap.org/data/2.5/forecast?q=${town}&units=metric&appid=5c6f54f8fe0bf251b4535c78978cebf7`
@@ -22,6 +23,7 @@ function App() {
       .then((nextresult) => {
         let next = nextresult.list[8].main.temp;
         setNextWeather(next);
+        console.log(nextresult);
       });
   };
 
