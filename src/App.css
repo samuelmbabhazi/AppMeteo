@@ -2,9 +2,9 @@
 
 body {
   background-image: url("../public/bg.jpg");
-  background-position: center;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+  
+  background-size: 100% ;
+
   font-family: "ABeeZee", sans-serif;
   display: flex;
   justify-content: center;
