@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=ABeeZee&family=Poppins:wght@300&family=Raleway&display=swap");
 
 body {
-  background-image: url("../public/bg.jpg");
-  
-  background-size: 100% ;
+  background: url("../public/bg.jpg");
+
+  background-size: 100% 100%;
 
   font-family: "ABeeZee", sans-serif;
   display: flex;
@@ -33,13 +33,19 @@ body {
   border-radius: 15px;
 }
 .search-bar {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.632),
+    rgba(255, 255, 255, 0.571)
+  );
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
   margin-left: auto;
   margin-right: auto;
   outline: none;
   border: none;
   height: 25px;
   border-radius: 15px;
-  box-shadow: 10px 10px 10px #7594ab;
   padding-left: 8px;
 }
 p {
