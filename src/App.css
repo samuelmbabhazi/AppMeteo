@@ -144,7 +144,7 @@ h5 {
 @media (max-width: 900px) {
   body {
     background: url("../public/bg.jpg");
-    background-repeat: no-repeat;
+    background-repeat: repeat;
   
     background-size: 100% 100%;
   }
