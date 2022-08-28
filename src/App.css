@@ -2,8 +2,9 @@
 
 body {
   background: url("../public/bg.jpg");
+  background-repeat: no-repeat;
 
-  background-size: 100% 100%;
+  background-size: 100% ;
 
   font-family: "ABeeZee", sans-serif;
   display: flex;
@@ -141,6 +142,12 @@ h5 {
   padding: 0px;
 }
 @media (max-width: 900px) {
+  body {
+    background: url("../public/bg.jpg");
+    background-repeat: no-repeat;
+  
+    background-size: 100% 100%;
+  }
   .main {
     margin-top: 25%;
     width: 90vw;
