@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=ABeeZee&family=Poppins:wght@300&family=Raleway&display=swap");
 
 body {
-  background: url("../public/bg.jpg");
+  background-image: url("https://images.unsplash.com/photo-1519681393784-d120267933ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1124&q=100");
+
   background-repeat: no-repeat;
-  
+  background-size: cover;
 
   font-family: "ABeeZee", sans-serif;
   display: flex;
@@ -21,16 +22,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(
-    135deg,
-    rgb(255, 255, 255, 0.1),
-    rgb(255, 255, 255, 0)
-  );
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
-  box-shadow: 0 8px 32px 0 rgb(0, 0, 0, 0.37);
-  border: 1px solid rgb(255, 255, 255, 0.18);
-  border-radius: 15px;
+  backdrop-filter: blur(9px) saturate(180%);
+  -webkit-backdrop-filter: blur(9px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.51);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
 }
 .search-bar {
   background: linear-gradient(
@@ -141,7 +137,6 @@ h5 {
   padding: 0px;
 }
 @media (max-width: 900px) {
-  
   .main {
     margin-top: 25%;
     width: 90vw;
